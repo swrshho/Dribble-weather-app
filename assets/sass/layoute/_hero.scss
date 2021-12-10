@@ -1,0 +1,48 @@
+// Hero Section styles
+.hero {
+  margin-top: 4rem;
+  width: 100%;
+  height: 30rem;
+  background-image: url(/assets/images/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+  padding: 2rem;
+  color: $white;
+  box-shadow: -50px 50px 50px -30px #BDC3C7, 50px 50px 50px -30px #BDC3C7;
+
+  &__forcast{
+    &__icon {
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      background-image: url(/assets/images/sun--filled.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      filter: invert(100%);
+    }
+
+    &__temp {
+      font-size: 10rem;
+      font-weight: 300;
+    }
+
+    &__location {
+      font-size: 2rem;
+    }
+  }
+
+  &__date {
+    font-size: 2rem;
+    &__time {
+      font-weight: 700;
+      width: fit-content;
+      margin-bottom: 1rem;
+    }
+    &__day {
+      font-weight: 300;
+    }
+  }
+}
