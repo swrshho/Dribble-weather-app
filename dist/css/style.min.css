@@ -42,6 +42,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: "Roboto";
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,7 +82,7 @@ a {
       justify-content: space-around;
 }
 
-.content-cneter {
+.content-center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -89,5 +93,67 @@ a {
 
 .cp {
   cursor: pointer;
+}
+
+body {
+  background-color: #E4E6FE;
+}
+
+.main {
+  background-color: #f6f6fc;
+  width: 70%;
+  outline: 0.2rem solid #3a4fd9;
+  margin-top: 5rem;
+  padding: 2rem 4rem;
+  border-radius: 40px;
+}
+
+#logo h1 {
+  color: #5865E4;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.nav {
+  width: 35%;
+}
+
+.nav__search-box {
+  border-radius: 5px;
+  background-color: #ffffff;
+  outline: 0.2px solid #bdc3c7;
+}
+
+.nav__search-box #search-bar {
+  padding: .9rem 1.3rem;
+  border: none;
+}
+
+.nav__search-box #search-icon {
+  font-size: 1.5rem;
+  color: #bdc3c7;
+  margin: 0 1rem 1rem 0;
+}
+
+.nav__button {
+  width: 2.5rem;
+  height: 2rem;
+}
+
+.nav__button > * {
+  display: block;
+  width: 100%;
+  height: 3px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: #3a4fd9;
+}
+
+.nav__button > :first-child {
+  width: 60%;
+}
+
+.nav__button > :last-child {
+  width: 80%;
 }
 /*# sourceMappingURL=style.min.css.map */

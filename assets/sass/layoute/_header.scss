@@ -1,0 +1,54 @@
+// header styles
+
+#logo {
+  h1 {
+  color: $lightPurple;
+  font-size: 3rem;
+  font-weight: 700;
+  }
+}
+
+
+.nav {
+  width: 35%;
+  
+
+  &__search-box {
+    border-radius: 5px;
+    background-color: $white;
+    outline: 0.2px solid $gray;
+
+    #search-bar {
+      padding: .9rem 1.3rem;
+      border: none;
+    }
+
+    #search-icon {
+      font-size: 1.5rem;
+      color: $gray;
+      margin: 0 1rem 1rem 0
+    }
+  }
+
+  &__button {
+    width: 2.5rem;
+    height: 2rem;
+
+    > * {
+      display: block;
+      width: 100%;
+      height: 3px;
+      align-self: flex-end;
+      background-color: $purple;
+    }
+
+    &>:first-child {
+      
+      width: 60%;
+    }
+
+    &>:last-child {
+      width: 80%;
+    }
+  }
+}

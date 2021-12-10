@@ -4,9 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- importing stylesheet -->
+  <link rel="stylesheet" href="/dist/css/style.min.css">
+
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <title>Dribble Weather App</title>
 </head>
-<body>
-  
+<body class="flex content-center">
+  <!-- main content -->
+  <main class="main">
+    <header class="header flex ai-c jc-sb">
+      <div id="logo">
+        <h1>Ryan</h1>
+      </div>
+
+      <nav class="nav flex jc-sb ai-c">
+        <div class="nav__search-box">
+          <input type="search" name="search" id="search-bar" placeholder="Enter city name..." size="30">
+          <a href="#" id="search-icon">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+        
+
+        <div class="nav__button flex fd-c jc-sb cp">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+  </main>
 </body>
 </html>
