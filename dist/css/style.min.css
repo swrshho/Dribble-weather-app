@@ -107,15 +107,28 @@ body {
   cursor: pointer;
 }
 
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mb-6 {
+  margin-bottom: 6rem;
+}
+
+.h100 {
+  height: 100%;
+}
+
 body {
   background-color: #E4E6FE;
 }
 
 .main {
   background-color: #f6f6fc;
-  width: 70%;
+  width: 80%;
   outline: 0.2rem solid #3a4fd9;
   margin-top: 5rem;
+  margin-bottom: 5rem;
   padding: 2rem 4rem;
   border-radius: 20px;
   -webkit-box-shadow: -50px 50px 50px -30px #BDC3C7, 50px 50px 50px -30px #BDC3C7;
@@ -221,5 +234,180 @@ body {
 
 .hero__date__day {
   font-weight: 300;
+}
+
+.forcast {
+  width: 40%;
+}
+
+.forcast__info {
+  background-color: #ffffff;
+  padding: 2.3rem;
+  border-radius: 15px;
+  outline: 0.2px solid #ced0d1;
+}
+
+.forcast__info__icon {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 1rem;
+  -webkit-filter: invert(21%) sepia(99%) saturate(1637%) hue-rotate(222deg) brightness(109%) contrast(96%);
+          filter: invert(21%) sepia(99%) saturate(1637%) hue-rotate(222deg) brightness(109%) contrast(96%);
+}
+
+.forcast__info__seperator {
+  display: inline-block;
+  width: 1px;
+  background-color: #ced0d1;
+}
+
+.forcast__info #humidity {
+  background-image: url(/assets/images/humidity.png);
+}
+
+.forcast__info #uv {
+  background-image: url(/assets/images/uv.png);
+}
+
+.forcast__info #sunrise {
+  background-image: url(/assets/images/Sunrise.png);
+}
+
+.forcast__info #sunset {
+  background-image: url(/assets/images/Sunset.png);
+}
+
+.forcast__info__txt {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.forcast__info__number {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.forcast__rain {
+  padding: 2rem;
+  background: -webkit-gradient(linear, left top, right top, from(#c3c7ff), color-stop(60%, #4d5cf0));
+  background: linear-gradient(90deg, #c3c7ff 0%, #4d5cf0 60%);
+  -webkit-box-shadow: -50px 50px 50px -30px #BDC3C7, 50px 50px 50px -30px #BDC3C7;
+          box-shadow: -50px 50px 50px -30px #BDC3C7, 50px 50px 50px -30px #BDC3C7;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.forcast__rain #monthly-txt {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.forcast__rain #monthly-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.forcast__rain #yearly-txt {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.forcast__rain #yearly-number {
+  color: #2ecc71;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.weekly-forcast {
+  width: 55%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  outline: 0.2px solid #ced0d1;
+}
+
+.weekly-forcast__tabs {
+  margin-bottom: 1rem;
+}
+
+.weekly-forcast__tabs__btn {
+  cursor: pointer;
+  color: #6d6d6d;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.weekly-forcast__tabs__btn--active {
+  color: #000000;
+}
+
+.weekly-forcast__tabs__btn__seperator {
+  display: inline-block;
+  width: .2rem;
+  height: .2rem;
+  border-radius: 50%;
+  background-color: #6d6d6d;
+  margin: 0 1.5rem;
+}
+
+.weekly-forcast__week {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  height: 8.5rem;
+}
+
+.weekly-forcast__week__seperator {
+  display: inline-block;
+  height: 80%;
+  width: 1px;
+  background-color: #ced0d1;
+}
+
+.weekly-forcast__week__day .status-icon {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 1rem;
+  -webkit-filter: invert(21%) sepia(99%) saturate(1637%) hue-rotate(222deg) brightness(109%) contrast(96%);
+          filter: invert(21%) sepia(99%) saturate(1637%) hue-rotate(222deg) brightness(109%) contrast(96%);
+  margin-bottom: 2rem;
+}
+
+.weekly-forcast__week__day .day {
+  color: #6d6d6d;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.weekly-forcast__week__day .temp {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.weekly-forcast__week__day .sunny {
+  background-image: url(/assets/images/sun--shallow.png);
+}
+
+.weekly-forcast__week__day .cloudy {
+  background-image: url(/assets/images/cloud.png);
+}
+
+.weekly-forcast__week__day .lightning-cloudy {
+  background-image: url(/assets/images/lightning-cloud.png);
+}
+
+.weekly-forcast__week__day .rainy-cloudy {
+  background-image: url(/assets/images/rainy-cloud.png);
+}
+
+.weekly-forcast__week__day .windy {
+  background-image: url(/assets/images/windy.png);
 }
 /*# sourceMappingURL=style.min.css.map */

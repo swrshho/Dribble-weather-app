@@ -1,0 +1,159 @@
+// forcast and chart styles
+
+.forcast {
+  width: 40%;
+  &__info {
+    background-color: $white;
+    padding: 2.3rem;
+    border-radius: 15px;
+    outline: 0.2px solid $lightGray;
+
+    &__icon {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 1rem;
+      filter: invert(21%) sepia(99%) saturate(1637%) hue-rotate(222deg) brightness(109%) contrast(96%);
+    }
+
+    &__seperator {
+      display: inline-block;
+      width: 1px;
+      background-color: $lightGray;
+    }
+
+    #humidity {
+      background-image: url(/assets/images/humidity.png);
+    }
+
+    #uv {
+      background-image: url(/assets/images/uv.png);
+    }
+    #sunrise {
+      background-image: url(/assets/images/Sunrise.png);
+    }
+
+    #sunset {
+      background-image: url(/assets/images/Sunset.png);
+    }
+
+    &__txt {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+    &__number {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  &__rain {
+    padding: 2rem;
+    background: linear-gradient(90deg, rgba(195,199,255,1) 0%, rgba(77,92,240,1) 60%);
+    box-shadow: -50px 50px 50px -30px #BDC3C7, 50px 50px 50px -30px #BDC3C7;
+    border-radius: 10px;
+    color: $white;
+    #monthly-txt {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #monthly-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    #yearly-txt {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    #yearly-number {
+      color: #2ecc71;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+}
+
+
+.weekly-forcast {
+  width: 55%;
+  background-color: $white;
+  border-radius: 15px;
+  padding: 2rem;
+  outline: 0.2px solid $lightGray;
+
+  &__tabs {
+    margin-bottom: 1rem;
+    &__btn {
+      cursor: pointer;
+      color: $darkGray;
+      font-size: 1.5rem;
+      font-weight: 700;
+      &--active {
+        color: #000000;
+      }
+
+      &__seperator {
+        display: inline-block;
+        width: .2rem;
+        height: .2rem;
+        border-radius: 50%;
+        background-color: $darkGray;
+        margin: 0 1.5rem;
+      }
+    }
+  }
+  
+  &__week {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    height: 8.5rem;
+
+    &__seperator {
+      display: inline-block;
+      height: 80%;
+      width: 1px;
+      background-color: $lightGray;
+    }
+
+    &__day {
+      .status-icon {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 1rem;
+        filter: invert(21%) sepia(99%) saturate(1637%) hue-rotate(222deg) brightness(109%) contrast(96%);
+        margin-bottom: 2rem;
+      }
+      .day {
+        color: $darkGray;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+      .temp {
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+      .sunny {
+        background-image: url(/assets/images/sun--shallow.png);
+      }
+      .cloudy {
+        background-image: url(/assets/images/cloud.png);
+      }
+      .lightning-cloudy {
+        background-image: url(/assets/images/lightning-cloud.png);
+      }
+      .rainy-cloudy {
+        background-image: url(/assets/images/rainy-cloud.png);
+      }
+      .windy {
+        background-image: url(/assets/images/windy.png);
+      }
+    }
+  }
+}

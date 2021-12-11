@@ -11,11 +11,16 @@
   <!-- Font Awsome -->
   <link rel="stylesheet" href="https://cdnjs.clouto use icondflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- chart JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js" integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Dribble Weather App</title>
 </head>
 <body class="flex content-center">
   <!-- main content -->
   <main class="main">
+
+    <!-- header -->
     <header class="header flex ai-c jc-sb">
       <div id="logo">
         <h1>Rayn</h1>
@@ -38,6 +43,7 @@
       </nav>
     </header>
 
+    <!-- Hero -->
     <section class="hero flex ai-fe jc-sb">
       <div class="hero__forcast">
         <i class="hero__forcast__icon"></i>
@@ -50,6 +56,181 @@
         <p class="hero__date__day">Sunset time, Monday</p>
       </div>
     </section>
+ 
+    <!-- forcast and chart -->
+    <section class="flex ai-c jc-sb mt-4 forcast-container">
+      <div class="forcast">
+        <div class="forcast__info flex jc-sb">
+          <div class="forcast__info__weather">
+
+            <div class="flex ai-c mb-6">
+              <i class="forcast__info__icon" id="humidity"></i>
+              <div class="flex fd-c">
+                <p class="forcast__info__txt">Humidity</p>
+                <p class="forcast__info__number">39%</p>
+              </div>
+            </div>
+            
+            <div class="flex ai-c">
+              <i class="forcast__info__icon" id="uv"></i>
+              <div class="flex fd-c">
+                <p class="forcast__info__txt">UV Index</p>
+                <p class="forcast__info__number">0 of 10</p>
+              </div>
+            </div>
+            
+          </div>
+
+          <span class="forcast__info__seperator"></span>
+
+          <div class="forcasat__info__sun">
+            <div class="flex ai-c mb-6">
+              <i class="forcast__info__icon" id="sunrise"></i>
+              <div class="flex fd-c">
+                <p class="forcast__info__txt">Sunset</p>
+                <p class="forcast__info__number">7:50 pm</p>
+              </div>
+            </div>
+
+            <div class="flex ai-c">
+              <i class="forcast__info__icon" id="sunset"></i>
+              <div class="flex fd-c">
+                <p class="forcast__info__txt">Sunrise</p>
+                <p class="forcast__info__number">6:35 am</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="forcast__rain flex jc-sb mt-4">
+          <div class="forcast__rain__monthly">
+            <p id="monthly-txt">Monthly Rainfall</p>
+            <p id="monthly-number">45mm</p>
+          </div>
+
+          <div class="forcast__rain__yearly">
+            <p id="yearly-txt">This Year</p>
+            <p id="yearly-number">+ 17%</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="weekly-forcast">
+
+        <div class="weekly-forcast__tabs">
+          <a href="#" class="weekly-forcast__tabs__btn">Temperature</a>
+          <span class="weekly-forcast__tabs__btn__seperator"></span>
+          <a href="#" class="weekly-forcast__tabs__btn">Precipitation</a>
+          <span class="weekly-forcast__tabs__btn__seperator"></span>
+          <a href="#" class="weekly-forcast__tabs__btn  weekly-forcast__tabs__btn--active">Wind</a>
+        </div>
+
+        <div class="weekly-forcast__chart">
+          <canvas id="myChart"></canvas>
+        </div>
+
+        <div class="weekly-forcast__week mt-4 flex ai-c jc-sb">
+          <div class="weekly-forcast__week__day">
+            <p class="day">MON</p>
+            <i class="status-icon sunny"></i>
+            <p class="temp">13°</p>
+          </div>
+          <span class="weekly-forcast__week__seperator"></span>
+          <div class="weekly-forcast__week__day">
+            <p class="day">TUE</p>
+            <i class="status-icon windy"></i>
+            <p class="temp">12°</p>
+          </div>
+          <span class="weekly-forcast__week__seperator"></span>
+          <div class="weekly-forcast__week__day">
+            <p class="day">WED</p>
+            <i class="status-icon cloudy"></i>
+            <p class="temp">12°</p>
+          </div>
+          <span class="weekly-forcast__week__seperator"></span>
+          <div class="weekly-forcast__week__day">
+            <p class="day">THU</p>
+            <i class="status-icon lightning-cloudy"></i>
+            <p class="temp">9°</p>
+          </div>
+          <span class="weekly-forcast__week__seperator"></span>
+          <div class="weekly-forcast__week__day">
+            <p class="day">FRI</p>
+            <i class="status-icon rainy-cloudy"></i>
+            <p class="temp">7°</p>
+          </div>
+          <span class="weekly-forcast__week__seperator"></span>
+          <div class="weekly-forcast__week__day">
+            <p class="day">SAT</p>
+            <i class="status-icon cloudy"></i>
+            <p class="temp">10°</p>
+          </div>
+          <span class="weekly-forcast__week__seperator"></span>
+          <div class="weekly-forcast__week__day">
+            <p class="day">SUN</p>
+            <i class="status-icon sunny"></i>
+            <p class="temp">11°</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- chart config -->
+  <script>
+    let myChart = document.querySelector('#myChart').getContext('2d')
+    window.addEventListener('beforeprint', () => {
+      myChart.resize(600, 200);
+    });
+    window.addEventListener('afterprint', () => {
+      myChart.resize();
+    });
+
+    let weeklyChart= new Chart(myChart, {
+      type: 'line',
+      data: {
+        labels: ['01am', '03am', '07am', '01pm', '03pm', '07pm', '10pm'],
+        datasets: [{
+          label: 'wind',
+          data: [
+            13, 11, 14, 16, 15, 13, 12
+          ],
+          fill: true,
+          tension: 0.5,
+          pointRadius: 0,
+          borderColor: '#3a4fd9',
+          backgroundColor: '#E4E6FE',
+          responsive: true
+        }]
+      },
+
+      options: {
+        maintainAspectRatio: false,
+        plugins: {
+          datalabels: {
+            display: false
+          }
+        },
+
+        scales: {
+          x: {
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            grid: {
+              display: false
+            },
+            legend: {
+              display: false
+            },
+            min: 8,
+            max: 20
+          },
+        }
+      }
+    })
+  </script>
 </body>
 </html>
