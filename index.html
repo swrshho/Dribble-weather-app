@@ -27,11 +27,12 @@
       </div>
 
       <nav class="nav flex jc-sb ai-c">
-        <div class="nav__search-box">
-          <input type="search" name="search" id="search-bar" placeholder="Enter city name..." size="30">
+        <div class="nav__search-box flex ai-c">
+          <input list="suggestions" type="search" name="search" id="search-bar" placeholder="Enter city name..." >
           <a href="#" id="search-icon">
             <i class="fas fa-search"></i>
           </a>
+          <datalist id="suggestions"></datalist>
         </div>
         
 
@@ -67,7 +68,7 @@
               <i class="forcast__info__icon" id="humidity"></i>
               <div class="flex fd-c">
                 <p class="forcast__info__txt">Humidity</p>
-                <p class="forcast__info__number">39%</p>
+                <p id="forcast__info__humidity" class="forcast__info__number">39%</p>
               </div>
             </div>
             
@@ -88,7 +89,7 @@
               <i class="forcast__info__icon" id="sunrise"></i>
               <div class="flex fd-c">
                 <p class="forcast__info__txt">Sunset</p>
-                <p class="forcast__info__number">7:50 pm</p>
+                <p id="forcast__info__sunset" class="forcast__info__number">7:50 pm</p>
               </div>
             </div>
 
@@ -96,7 +97,7 @@
               <i class="forcast__info__icon" id="sunset"></i>
               <div class="flex fd-c">
                 <p class="forcast__info__txt">Sunrise</p>
-                <p class="forcast__info__number">6:35 am</p>
+                <p id="forcast__info__sunrise" class="forcast__info__number">6:35 am</p>
               </div>
             </div>
           </div>
@@ -175,6 +176,9 @@
       </div>
     </section>
   </main>
+
+  <!-- index.js -->
+  <script src="/assets/js/index.js"></script>
 
   <!-- chart config -->
   <script>

@@ -17,10 +17,12 @@
     border-radius: 5px;
     background-color: $white;
     outline: 0.2px solid $gray;
+    flex: 0.97;
 
     #search-bar {
       padding: .9rem 1.3rem;
       border: none;
+      width: 100%;
     }
 
     #search-icon {
