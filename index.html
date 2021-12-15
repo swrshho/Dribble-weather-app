@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- importing stylesheet -->
-  <link rel="stylesheet" href="/dist/css/style.min.css">
+  <link rel="stylesheet" href="./dist/css/style.min.css">
 
   <!-- Font Awsome -->
   <link rel="stylesheet" href="https://cdnjs.clouto use icondflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -195,7 +195,7 @@
       data: {
         labels: ['01am', '03am', '07am', '01pm', '03pm', '07pm', '10pm'],
         datasets: [{
-          label: 'wind',
+          label: '',
           data: [
             13, 11, 14, 16, 15, 13, 12
           ],
@@ -211,9 +211,12 @@
       options: {
         maintainAspectRatio: false,
         plugins: {
-          datalabels: {
-            display: false
+          legend: {
+            labels: {
+              boxWidth: 0
+            }
           }
+
         },
 
         scales: {
@@ -226,7 +229,7 @@
             grid: {
               display: false
             },
-            legend: {
+            ticks: {
               display: false
             },
             min: 8,
